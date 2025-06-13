@@ -5,7 +5,7 @@ import csv
 from uuid import uuid4
 
 app = Flask(__name__)
-app.secret_key = 'supersecretkey'
+app.secret_key = 'Baradappa1'
 
 # --- Yordamchi funksiyalar ---
 
@@ -42,7 +42,7 @@ def login():
     username = request.form['username']
     password = request.form['password']
 
-    if username == 'admin' and password == 'admin123':
+    if username == 'admin' and password == 'Baradappa1':
         session['user'] = 'admin'
         return redirect('/admin')
 
