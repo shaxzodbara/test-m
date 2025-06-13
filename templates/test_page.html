@@ -76,13 +76,14 @@
                 {% set q_index = loop.index0 %}
                 <div class="question-box">
                     <div class="question-title">{{ loop.index }}. {{ q.question }}</div>
+                    {% set letters = ['a', 'b', 'c', 'd'] %}
                     {% for opt in q.options %}
                         <div class="form-check">
                             <input class="form-check-input"
                                 type="radio"
                                 name="q{{ q_index }}"
                                 id="q{{ q_index }}_{{ loop.index }}"
-                                value="{{ opt }}"
+                                value="{{ letters[loop.index0] }}"
                                 required>
                             <label class="form-check-label" for="q{{ q_index }}_{{ loop.index }}">
                                 {{ opt }}
