@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8" />
+    <title>{{ subject.title() }} fanidan test</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-image: url('https://yuz.uz/file/news/97dec66878c45cbaee9dffeb80912e98.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            color: #222;
+        }
+
+        .overlay {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+            max-width: 800px;
+            margin: 40px auto;
+        }
+
+        .question-box {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .question-title {
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .form-check {
+            padding-left: 1.5em;
+        }
+
+        .form-check-input {
+            margin-left: -1.5em;
+        }
+
+        .submit-btn {
+            width: 100%;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 30px;
+        }
+
+        .timer-box {
+            background-color: #fff3cd;
+            border: 1px solid #ffeeba;
+            padding: 10px 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            color: #856404;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <h2 class="text-center mb-4">{{ subject.title() }} fanidan test</h2>
+
+        <!-- ⏱ Vaqt sanagich -->
+        <div class="timer-box" id="timer">Qolgan vaqt: 20:00</div>
+
+        <form id="testForm" method="POST" action="{{ url_for('submit_test', subject=subject) }}">
+            {% for q in questions %}
+                {% set q_index = loop.index0 %}
+                <div class="question-box">
+                    <div class="question-title">{{ loop.index }}. {{ q.question }}</div>
+                    {% for opt in q.options %}
+                        <div class="form-check">
+                            <input class="form-check-input"
+                                type="radio"
+                                name="q{{ q_index }}"
+                                id="q{{ q_index }}_{{ loop.index }}"
+                                value="{{ opt }}"
+                                required>
+                            <label class="form-check-label" for="q{{ q_index }}_{{ loop.index }}">
+                                {{ opt }}
+                            </label>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+
+            <button type="submit" class="btn btn-primary submit-btn">Yakunlash</button>
+        </form>
+    </div>
+
+    <script>
+        let duration = 20 * 60; // 20 daqiqa (sekundlarda)
+        const timerEl = document.getElementById('timer');
+        const form = document.getElementById('testForm');
+
+        function updateTimer() {
+            const minutes = Math.floor(duration / 60);
+            const seconds = duration % 60;
+            timerEl.textContent = `Qolgan vaqt: ${minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
+            if (duration === 0) {
+                alert("Vaqt tugadi. Javoblaringiz yuboriladi.");
+                form.submit();
+            } else {
+                duration--;
+                setTimeout(updateTimer, 1000);
+            }
+        }
+
+        updateTimer();
+    </script>
+</body>
+</html>

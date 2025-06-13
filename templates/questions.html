@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ subject.capitalize() }} savollari</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        td, th {
+            border: 1px solid #999;
+            padding: 8px;
+        }
+        th {
+            background: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h2>{{ subject.capitalize() }} fanidan test savollari</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Savol</th>
+                <th>A</th>
+                <th>B</th>
+                <th>C</th>
+                <th>D</th>
+                <th>To‘g‘ri javob</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for question in questions %}
+            <tr>
+                <td>{{ question['savol'] }}</td>
+                <td>{{ question['a'] }}</td>
+                <td>{{ question['b'] }}</td>
+                <td>{{ question['c'] }}</td>
+                <td>{{ question['d'] }}</td>
+                <td>{{ question['javob']|upper }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

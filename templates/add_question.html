@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>Savol Qo‘shish</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .card {
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+        .form-label {
+            font-weight: 600;
+        }
+        .container {
+            max-width: 700px;
+        }
+    </style>
+</head>
+<body>
+<div class="container mt-5">
+    <div class="card p-4">
+        <h3 class="text-center mb-4">Yangi Savol Qo‘shish</h3>
+        <form method="POST" action="{{ url_for('add_question') }}">
+            <div class="mb-3">
+                <label class="form-label">Fan tanlang:</label>
+                <select class="form-select" name="subject" required>
+                    <option value="">Tanlang...</option>
+                    <option value="huquq">Huquq</option>
+                    <option value="tarbiya">Tarbiya</option>
+                    <option value="tarix">Tarix</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Savol matni:</label>
+                <input type="text" class="form-control" name="question" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Variantlar:</label>
+                <div class="input-group mb-2">
+                    <span class="input-group-text">A</span>
+                    <input type="text" class="form-control" name="option1" required>
+                </div>
+                <div class="input-group mb-2">
+                    <span class="input-group-text">B</span>
+                    <input type="text" class="form-control" name="option2" required>
+                </div>
+                <div class="input-group mb-2">
+                    <span class="input-group-text">C</span>
+                    <input type="text" class="form-control" name="option3" required>
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">D</span>
+                    <input type="text" class="form-control" name="option4" required>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">To‘g‘ri javobni tanlang:</label>
+                <select class="form-select" name="answer" required>
+                    <option value="">Tanlang...</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Saqlash</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
