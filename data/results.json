@@ -1,0 +1,90 @@
+[
+    {
+        "id": "5bd4030e-6c53-48c3-bd68-3cebec621f6a",
+        "username": "sa",
+        "subject": "huquq",
+        "score": "0/20",
+        "answers": {
+            "Oʻzbekiston Respublikasi Prezidenti necha yil muddatga saylanadi?": {
+                "your_answer": "4 yil",
+                "correct_answer": "b"
+            },
+            "Fuqarolik kodeksiga koʻra shartnoma qachon kuchga kiradi?": {
+                "your_answer": "Imzolangan paytdan",
+                "correct_answer": "a"
+            },
+            "Davlat tilidan tashqari qaysi tillar rasmiy ishlatiladi?": {
+                "your_answer": "Rus tili",
+                "correct_answer": "a"
+            },
+            "Jinoyat protsessida ayblovchi kim?": {
+                "your_answer": "Prokuror",
+                "correct_answer": "d"
+            },
+            "Konstitutsiyaga koʻra davlat budjetini kim tasdiqlaydi?": {
+                "your_answer": "Prezident",
+                "correct_answer": "c"
+            },
+            "Oʻzbekiston Respublikasi Konstitutsiyaviy sudi nimani koʻrib chiqadi?": {
+                "your_answer": "Jinoyat ishlarini",
+                "correct_answer": "b"
+            },
+            "Huquqbuzarlik uchun maʼmuriy javobgarlikka tortishning eng kam yoshi nechida boshlanadi?": {
+                "your_answer": "14 yosh",
+                "correct_answer": "b"
+            },
+            "Fuqarolik protsessida daʼvogarning vazifasi nima?": {
+                "your_answer": "Ishni koʻrib chiqish",
+                "correct_answer": "b"
+            },
+            "Oʻzbekiston Respublikasida sud qarorlaridan shikoyat qilish muddati qancha?": {
+                "your_answer": "7 kun",
+                "correct_answer": "d"
+            },
+            "Byudjet mablagʻlarini nazorat qiluvchi davlat organi qaysi?": {
+                "your_answer": "Markaziy bank",
+                "correct_answer": "c"
+            },
+            "Qaysi vaziyatda himoya qilishning zarurligi tan olinadi?": {
+                "your_answer": "Faol jinoyatchi hujum qilganda",
+                "correct_answer": "a"
+            },
+            "Oʻzbekiston Respublikasi sud tizimining eng yuqori pogʻonasi nima?": {
+                "your_answer": "Oliy Majlis",
+                "correct_answer": "c"
+            },
+            "Qaysi holatda nikoh yaroqsiz deb topiladi?": {
+                "your_answer": "Biri voyaga yetmagan boʻlsa",
+                "correct_answer": "c"
+            },
+            "Jinoyat ishini qoʻzgʻatish asosini nima tashkil etadi?": {
+                "your_answer": "Sud qarori",
+                "correct_answer": "c"
+            },
+            "Huquqiy ongning asosiy elementi nima?": {
+                "your_answer": "Huquqiy hujjat",
+                "correct_answer": "b"
+            },
+            "Davlat rahbarining asosiy vazifasi nima?": {
+                "your_answer": "Byudjet tasdiqlash",
+                "correct_answer": "b"
+            },
+            "Oʻzbekiston Respublikasi Konstitutsiyasi nechta boʻlimdan iborat?": {
+                "your_answer": "5 boʻlim",
+                "correct_answer": "c"
+            },
+            "Xalqaro huquqning asosiy prinsipi nima?": {
+                "your_answer": "Qonuniylik",
+                "correct_answer": "b"
+            },
+            "Davlat boshqaruvi subyekti nima?": {
+                "your_answer": "Sud",
+                "correct_answer": "c"
+            },
+            "Advokat himoya qiluvchi sifatida kimni himoya qiladi?": {
+                "your_answer": "Guvohni",
+                "correct_answer": "b"
+            }
+        }
+    }
+]
